@@ -1,5 +1,4 @@
 # GraphXR Trial
---- 
 
 ## Notes
 
