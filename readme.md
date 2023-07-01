@@ -47,11 +47,11 @@ http://localhost:9000
 
 > Uncomment the neo4j service in docker-compose.yml if you want to try Neo4j too
 
-Username: neo4j
-Password: kineviz
-Bolt Port: 7687
-Host: neo4j (Connect with GraphXR use `neo4j` in Through Server mode)
-Browser URL: http://localhost:7474
+Username: neo4j  
+Password: kineviz  
+Bolt Port: 7687  
+Host: neo4j (Connect with GraphXR use `neo4j` in Through Server mode)  
+Browser URL: http://localhost:7474   
 
 ### 5. Cleanup
 
