@@ -7,11 +7,12 @@ services:
       - "./mongo/db:/data/db:rw"
       - "./mongo/backup:/backup:rw"
     restart: always
-    network_mode: host
 
   graphxr:
     image: kineviz/graphxr_trial:latest
     container_name: graphxr
+    ports:
+      - "8080:9000"
     volumes:
       - "./graphxr:/data:rw"
     environment:
@@ -20,7 +21,6 @@ services:
       - "MONGO_URL=mongodb://mongo/graphxr"
     depends_on:
       - mongo
-    network_mode: host
     restart: always
 
 ## neo4j is optional, if you want to use neo4j as the backend database, uncomment the following lines
