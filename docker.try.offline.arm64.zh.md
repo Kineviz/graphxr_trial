@@ -2,8 +2,10 @@ GraphXR 离线包安装（arm64版本）
 --
 
 ### 1. 下载离线包
+
 下载离线包到本地，解压后进入文件夹
-```
+
+```bash
 wget https://graphxr.oss-cn-shanghai.aliyuncs.com/tuke/graphxr-offline-arm64.zip
 unzip graphxr-offline-arm64.zip
 cd graphxr-offline-arm64
@@ -11,29 +13,29 @@ cd graphxr-offline-arm64
 
 ### 2. 查看系统架构
 
-> 如果不是aarch64架构，请联系图客获取对应的离线包
+> 如果不是aarch64/arm64架构，请联系图客获取对应的离线包
 
-```
+```bash
 uname -m
 ```
 
 ### 3. 安装docker
 
-```
+```bash
 sudo bash ./install_docker.sh
 
 ```
 
 #### 3.1 卸载
 
-```
+```bash
 sudo bash ./uninstall_docker.sh
 ```
 
 
 ### 4 启动GraphXR
 
-```
+```bash
 sudo bash ./start.sh
 ```
 
@@ -61,6 +63,6 @@ Browser地址: http://localhost:7474 或者 http://你的服务器IP:7474
 
 ### 5 停止GraphXR
 
-```
+```bash
 sudo bash ./stop.sh
 ```
