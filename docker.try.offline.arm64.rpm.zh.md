@@ -55,8 +55,15 @@ sudo rpm -ivh --force graphxr-2.17.0.x86_64.rpm
 
 #### 3.1 启动
 
-> 一般安装成功就能正常启动
+> 一般安装成功就已经启动了
 
+查看状态 （可选）
+```
+sudo systemctl status mongodb.service
+sudo systemctl status graphxr.service
+```
+
+启动命令 （可选）
 ```
 sudo systemctl start mongodb.service
 sudo systemctl start graphxr.service
@@ -70,6 +77,7 @@ http://localhost:9000 或者 http://你的服务器IP:9000
 > 信息可以在 /usr/local/graphxr/config.json, 修改完成之后需要重新启动一下graphXR（运行命令**sudo systemctl restart graphxr.service**）
 
 > 请联系 info@tugraphxr.com 或者“图客Graph”微信公众号 获取许可密钥。
+
 
 
 ### 4 停止GraphXR
