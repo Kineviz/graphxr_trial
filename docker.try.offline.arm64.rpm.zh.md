@@ -27,7 +27,21 @@ wget https://graphxr.oss-cn-shanghai.aliyuncs.com/graphxr/mongodb-community-4.0.
 
 #### 1.2 请确认已经安装了lsof工具(可能需要下载)
 
->可以到阿里云镜像中去找的<https://developer.aliyun.com/mirror> 或者 [https://www.rpmfind.net](https://www.rpmfind.net/linux/rpm2html/search.php?query=lsof&submit=Search)
+>可以到<https://vault.centos.org>或者 [https://www.rpmfind.net](https://www.rpmfind.net/linux/rpm2html/search.php?query=lsof&submit=Search) 中查找下载
+
+
+aarch64/arm64 架构
+```
+wget https://vault.centos.org/altarch/7/os/aarch64/Packages/lsof-4.87-6.el7.aarch64.rpm
+wget https://vault.centos.org/altarch/7/os/aarch64/Packages/libtirpc-0.2.4-0.16.el7.aarch64.rpm
+
+```
+x86_64 架构
+```
+wget http://vault.centos.org/8.4.2105/BaseOS/x86_64/os/Packages/lsof-4.93.2-1.el8.x86_64.rpm
+wget http://vault.centos.org/8.4.2105/BaseOS/x86_64/os/Packages/libtirpc-1.1.4-3.el8.x86_64.rpm
+
+```
 
 
 ### 2. 安装 
