@@ -56,7 +56,6 @@ services:
   #     - "NEO4J_dbms_logs_security_rotation_size=1m"
   #     - "NEO4J_dbms_logs_query_rotation_size=2m"
   #   restart: always
-  #   network_mode: host
 
 
 volumes:
