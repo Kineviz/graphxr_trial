@@ -1,0 +1,63 @@
+
+version: "3"
+
+services:
+  mongo:
+    image: mongo:4.0.28
+    container_name: graphxr_mongo
+    volumes:
+      - "./mongo/db:/data/db:rw"
+      - "./mongo/backup:/backup:rw"
+    restart: always
+
+  graphxr_whoami:
+    image: kineviz/graphxr_trial:whoami
+    container_name: graphxr_whoami
+    volumes:
+      - whoami-volume:/whoAmI:rw
+    restart: always
+    network_mode: host
+
+  graphxr:
+    image: kineviz/graphxr_trial:latest
+    container_name: graphxr
+    ports:
+      - "9000:9000"
+    volumes:
+      - whoami-volume:/whoAmI:r
+      - "./graphxr:/data:rw"
+    environment:
+      - "PORT=9000"
+      - "ADMIN_EMAIL=admin@graphxr.com"
+      - "ADMIN_PASSWORD=graphxr.com"
+      - "MONGO_URL=mongodb://mongo/graphxr"
+    depends_on:
+      - mongo
+      - graphxr_whoami
+    restart: always
+
+## neo4j is optional, if you want to use neo4j as the backend database, uncomment the following lines
+  # neo4j:
+  #   image: neo4j:4.4
+  #   container_name: graphxr_neo4j
+  #   volumes: 
+  #     - "./neo4j/data:/data:rw"
+  #     - "./neo4j/plugins:/plugins:rw"
+  #     - "./neo4j/logs:/logs:rw"
+  #     - "./neo4j/import:/var/lib/neo4j/import"
+  #   environment:
+  #     - "NEO4J_AUTH=neo4j/graphxr.com"
+  #     - "NEO4J_dbms_memory_heap_max__size=2G" 
+  #     - "NEO4J_dbms_memory_heap_initial__size=1G" 
+  #     - "NEO4J_dbms_memory_pagecache_size=1GB" 
+  #     - "NEO4j_dbms_memory_transaction_global_max_size=2G"
+  #     - "NEO4J_ACCEPT_LICENSE_AGREEMENT=yes"
+  #     - "NEO4J_dbms_logs_debug_rotation_size=1m"
+  #     - "NEO4J_dbms_logs_security_rotation_size=1m"
+  #     - "NEO4J_dbms_logs_query_rotation_size=2m"
+  #   restart: always
+  #   network_mode: host
+
+
+volumes:
+  whoami-volume: {} 

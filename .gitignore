@@ -1,0 +1,4 @@
+*.pdf
+graphxr/**
+mongo/**
+*.offline.*
