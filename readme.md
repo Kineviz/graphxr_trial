@@ -66,3 +66,16 @@ docker-compose down
 ```
 docker-compose pull && docker-compose up -d
 ```
+
+
+### Troubleshooting
+
+#### Unable to find user root: no matching entries in passwd file
+
+```shel
+docker stop $(docker ps -a -q)
+
+docker rm $(docker ps -a -q)
+
+docker rmi -f $(docker images -aq)
+```
