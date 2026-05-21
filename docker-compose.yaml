@@ -1,9 +1,8 @@
 
 services:
   mongo:
-    image: mongo:4.0.28
+    image: mongo:4.2
     container_name: graphxr_mongo
-    platform: linux/amd64
     volumes:
       - "./mongo/db:/data/db:rw"
       - "./mongo/backup:/backup:rw"
@@ -12,7 +11,6 @@ services:
   graphxr_whoami:
     image: kineviz/graphxr_trial:whoami
     container_name: graphxr_whoami
-    platform: linux/amd64
     volumes:
       - whoami-volume:/whoAmI:rw
     restart: always
@@ -21,7 +19,6 @@ services:
   graphxr:
     image: kineviz/graphxr_trial:latest
     container_name: graphxr
-    platform: linux/amd64
     ports:
       - "9000:9000"
     volumes:
