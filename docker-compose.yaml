@@ -1,11 +1,11 @@
 
 services:
   mongo:
-    image: mongo:8
+    image: mongo:4.2
     container_name: graphxr_mongo
     volumes:
-      - "./mongo8/db:/data/db:rw"
-      - "./mongo8/backup:/backup:rw"
+      - "./mongo/db:/data/db:rw"
+      - "./mongo/backup:/backup:rw"
     restart: always
 
   graphxr_whoami:
