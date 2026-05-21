@@ -1,4 +1,5 @@
 *.pdf
 graphxr/**
 mongo/**
+mongo8/**
 *.offline.*

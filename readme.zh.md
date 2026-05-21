@@ -19,7 +19,7 @@
 ### 2. 下载 docker-compose.yml 文件
 
 ```
-curl -0 https://raw.githubusercontent.com/Kineviz/graphxr_trial/master/docker-compose.yaml > docker-compose.yml
+curl -0 https://raw.githubusercontent.com/Kineviz/graphxr_trial/2.x/docker-compose.yaml > docker-compose.yml
 ```
 
 ### 3. 运行 docker-compose

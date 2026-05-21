@@ -18,7 +18,7 @@ English · [中文](./readme.zh.md)
 ### 2. Download docker-compose.yml
 
 ```
-curl -0 https://raw.githubusercontent.com/Kineviz/graphxr_trial/master/docker-compose.yaml > docker-compose.yml
+curl -0 https://raw.githubusercontent.com/Kineviz/graphxr_trial/2.x/docker-compose.yaml > docker-compose.yml
 ```
 
 ### 3. Run docker-compose
